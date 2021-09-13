@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 15:06:10 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/07 11:05:27 by gabriel          ###   ########.fr       */
+/*   Created: 2021/08/24 08:50:14 by gabriel           #+#    #+#             */
+/*   Updated: 2021/09/06 09:15:35 by gsilva-v         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char	*ft_strchr(const char *s, int c)
+char	*ft_substr(const char *s, unsigned int start, size_t len)
 {
-	int	find;
+	int		i;
+	char	*sub;
 
-	find = 0;
-	while (s[find] != '\0')
+	i = start;
+	if (s == NULL)
+		return (NULL);
+	if (i >= ft_strlen(s))
 	{
-		if (s[find] == (unsigned char)c)
-			return ((char *)s + find);
-		find++;
+		sub = (char *)ft_calloc(sizeof(char), 1);
+		if (!sub)
+			return (NULL);
+		return (sub);
 	}
-	if (s[find] == (unsigned char)c)
-		return ((char *)s + find);
-	return (0);
+	sub = (char *)malloc(sizeof((*s) * (len + 1)));
+	if (!sub)
+		return (NULL);
+	ft_strlcpy(sub, s + start, len + 1);
+	return (sub);
 }

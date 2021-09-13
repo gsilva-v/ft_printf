@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 15:06:10 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/07 11:05:27 by gabriel          ###   ########.fr       */
+/*   Created: 2021/08/25 17:07:06 by gabriel           #+#    #+#             */
+/*   Updated: 2021/09/08 14:37:29 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char	*ft_strchr(const char *s, int c)
+int	ft_putendl_fd(char *s)
 {
-	int	find;
+	int	i;
 
-	find = 0;
-	while (s[find] != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		if (s[find] == (unsigned char)c)
-			return ((char *)s + find);
-		find++;
+		write(1, s + i, 1);
+		i++;
 	}
-	if (s[find] == (unsigned char)c)
-		return ((char *)s + find);
-	return (0);
+	write(1, "\n", 1);
+	return (i);
 }

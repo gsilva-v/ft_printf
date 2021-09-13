@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/23 15:06:10 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/07 11:05:27 by gabriel          ###   ########.fr       */
+/*   Created: 2021/08/26 17:04:23 by gabriel           #+#    #+#             */
+/*   Updated: 2021/08/26 17:04:24 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char	*ft_strchr(const char *s, int c)
+t_list	*ft_lstlast(t_list *lst)
 {
-	int	find;
-
-	find = 0;
-	while (s[find] != '\0')
-	{
-		if (s[find] == (unsigned char)c)
-			return ((char *)s + find);
-		find++;
-	}
-	if (s[find] == (unsigned char)c)
-		return ((char *)s + find);
-	return (0);
+	if (lst == NULL)
+		return (0);
+	while (lst -> next != NULL)
+		lst = lst -> next;
+	return (lst);
 }
