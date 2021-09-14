@@ -14,7 +14,7 @@ SRCS = ./srcs/ft_printf.c\
 
 OBJS =$(SRCS:%.c=%.o)
 
-LIBOBJ = ./objs/
+LIBOBJ = ./tempobjs/
 
 all:clean cpobj lib  $(NAME)
 
