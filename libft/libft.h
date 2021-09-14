@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/23 15:07:13 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/11 09:34:53 by gabriel          ###   ########.fr       */
+/*   Updated: 2021/09/14 10:52:49 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,10 +44,10 @@ char	*ft_strnstr(const char *str, const char *tofind, size_t len);
 char	*ft_strrchr(const char *s, int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-void	ft_putstr_fd(char *s, int fd);
+int		ft_putchar_fd(char c);
+int		ft_putendl_fd(char *s);
+int		ft_putnbr_fd(long int n);
+int		ft_putstr_fd(char *s);
 char	*ft_itoa(int n);
 char	**ft_split(const char *s, char c);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));

@@ -30,12 +30,17 @@ cpobj: $(OBJS)
 clean:
 	$(RM) $(LIBOBJ)*.o
 
+forceclean:
+	$(RM) $(LIBOBJ)*.o
+	$(RM) ./libft/*.o
+	$(RM) ./srcs/*.o
+
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-main: 
+main: all
 	gcc main.c $(NAME) $(CFLAGS) 
 
-.PHONY: all clean fclean re lib mvobj main
+.PHONY: all clean fclean re lib mvobj main force clean

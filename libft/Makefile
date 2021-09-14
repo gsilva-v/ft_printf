@@ -66,5 +66,7 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+ 
+obj: $(OBJM) $(BOBJ)
 
 .PHONY : all clean re fclean bonus
