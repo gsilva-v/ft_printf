@@ -16,22 +16,23 @@ OBJS =$(SRCS:%.c=%.o)
 
 LIBOBJ = ./objs/
 
-all: cpobj lib  $(NAME)
+all:clean cpobj lib  $(NAME)
 
 lib: $(OBJS)
-	cd libft && make obj && cp *.o ../objs/ && cd ..
+	cd libft && make obj && cp *.o ../tempobjs/ && cd ..
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(LIBOBJ)*.o
 
-cpobj: $(OBJS)
+cpobj: $(OBJS)	
+	mkdir tempobjs
 	cp ./srcs/*.o $(LIBOBJ)
 
 clean:
-	$(RM) $(LIBOBJ)*.o
+	$(RM) $(LIBOBJ)
 
 forceclean:
-	$(RM) $(LIBOBJ)*.o
+	$(RM) $(LIBOBJ)
 	$(RM) ./libft/*.o
 	$(RM) ./srcs/*.o
 
