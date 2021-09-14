@@ -8,6 +8,6 @@ int main()
 	// printf("\nOriginal function:\nString: %s\nInt: %d\n", str, n);
 	// ft_printf("\nMy function: %s\n", str);
 	// printf("Original function: %s\n", str);
-	ft_printf("TESTE 1: %p \n",(void *) 0);
-	printf("ORIGINAL: %p \n",(void *) 0 );
+	ft_printf("TESTE 1: %p \n", (void *)0);
+	printf("ORIGINAL: %p \n", (void *)0);
 }

@@ -16,16 +16,16 @@ OBJS =$(SRCS:%.c=%.o)
 
 LIBOBJ = ./objs/
 
-all:clean mvobj lib  $(NAME)
+all: cpobj lib  $(NAME)
 
 lib: $(OBJS)
-	cd libft && make obj && mv *.o ../objs/ && cd ..
+	cd libft && make obj && cp *.o ../objs/ && cd ..
 
 $(NAME): $(OBJS)
 	ar -rcs $(NAME) $(LIBOBJ)*.o
 
-mvobj: $(OBJS)
-	mv ./srcs/*.o $(LIBOBJ)
+cpobj: $(OBJS)
+	cp ./srcs/*.o $(LIBOBJ)
 
 clean:
 	$(RM) $(LIBOBJ)*.o

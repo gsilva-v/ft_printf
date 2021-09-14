@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 14:39:56 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/13 10:50:32 by gabriel          ###   ########.fr       */
+/*   Updated: 2021/09/13 17:25:09 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	ft_whatprint(char s1, va_list args, int count)
 	{
 		count += 2;
 		count += ft_inttohex(va_arg(args, unsigned long int ), 2);// 0x nas primeiras casas
-	}	
+	}
 	if (s1 == 'd' || s1 == 'i')
 		count += ft_putnbr_fd(va_arg(args, int));
 	if (s1 == 'u')

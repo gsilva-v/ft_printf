@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 14:37:19 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/11 10:41:47 by gabriel          ###   ########.fr       */
+/*   Updated: 2021/09/13 17:29:03 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,8 +50,8 @@ int	ft_inttohex(unsigned long long  n, int whatx)
 		hex[len - 1] = '0';
 	hex = ft_convtohex(hex, len - 1, n, whatx);
 	if (whatx == 2)
-		if (hex[len-1] == '0' && len -1 == 0)
-			ft_printf("%s", "0x0");
+		if (hex[len-1] == '0' && len - 1 == 0)
+			ft_printf("%s", NULL_STR);
 		else	
 			ft_printf("0x%s", hex);
 	else
