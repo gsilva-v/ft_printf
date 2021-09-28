@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/25 17:07:02 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/14 10:49:54 by gabriel          ###   ########.fr       */
+/*   Updated: 2021/09/28 15:15:25 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ int	ft_lenint(long int n)
 		lenint++;
 		n = n / 10;
 	}
-	n = 0;
 	return (lenint);
 }
 
