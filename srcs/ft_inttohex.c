@@ -6,7 +6,7 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 14:37:19 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/14 10:33:19 by gabriel          ###   ########.fr       */
+/*   Updated: 2021/10/05 12:37:25 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int	ft_hexlen(unsigned long n)
 {
 	int	len;
 
-	len = 1;// quando o valor for menor que 16 nao tera mais como dividir, mas teremos que ter esse valor para alocação
+	len = 1;
 	while (n >= 16)
 	{
 		++len;

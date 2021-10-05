@@ -6,26 +6,13 @@
 /*   By: gabriel <gabriel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/10 14:11:34 by gabriel           #+#    #+#             */
-/*   Updated: 2021/09/10 15:19:36 by gabriel          ###   ########.fr       */
+/*   Updated: 2021/10/05 13:24:52 by gabriel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
 
-char	ft_upfive(int converter)
-{
-	if (converter == 5)
-		return ('5');
-	if (converter == 6)
-		return ('6');
-	if (converter == 7)
-		return ('7');
-	if (converter == 8)
-		return ('8');
-	if (converter == 9)
-		return ('9');
-	return (0);
-}
+static char	ft_upfive(int converter);
 
 char	ft_checkhexa(long long converter, int whatx)
 {
@@ -48,5 +35,20 @@ char	ft_checkhexa(long long converter, int whatx)
 		if (whatx == 1)
 			return (ft_upperx(converter));
 	}
+	return (0);
+}
+
+static char	ft_upfive(int converter)
+{
+	if (converter == 5)
+		return ('5');
+	if (converter == 6)
+		return ('6');
+	if (converter == 7)
+		return ('7');
+	if (converter == 8)
+		return ('8');
+	if (converter == 9)
+		return ('9');
 	return (0);
 }
